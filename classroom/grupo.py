@@ -16,7 +16,7 @@ class Grupo:
         if lista == None:
             lista = []
         lista.append(alumno)
-        self.listadoAlumnos = lista
+        self.listadoAlumnos = self.listadoAlumnos + lista
 
     def __str__(self):
         return "Grupo de estudiantes: "+self._grupo #De esta manera cuando se puede imprimir el atributo grupo de un objeto de tipo Grupo, cuando se llame 
