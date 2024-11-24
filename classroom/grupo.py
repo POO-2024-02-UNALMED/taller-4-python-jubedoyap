@@ -3,8 +3,10 @@ from classroom.asignatura import Asignatura
 class Grupo:
     grado = "Grupo 12" #Es un atributo de clase público (convención) para que al llamarlo desde el main se pueda imprimir
 
-    def __init__(self, grupo="grupo predeterminado", asignaturas=[], estudiantes=[]): #asignaturas y estudinates se crean como listas 
+    def __init__(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=[]): #estudinate se crean como lista y asignatura se deja en None
         self._grupo = grupo
+        if asignaturas == None: #Se hace esto porque Pyhton solo crea una lista por función
+            asignaturas = []
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes #Se declara el atributo como público (simbólicamente) ya que se accede desde el main 
 
