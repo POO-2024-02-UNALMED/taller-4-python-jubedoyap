@@ -1,7 +1,7 @@
 from classroom.asignatura import Asignatura
 
 class Grupo:
-    grado = "Grupo 12" #Es un atributo de clase público (convención) para que al llamarlo desde el main se pueda imprimir
+    grado = "Grado 12" #Es un atributo de clase público (convención) para que al llamarlo desde el main se pueda imprimir
 
     def __init__(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=[]): #estudinate se crean como lista y asignatura se deja en None
         self._grupo = grupo
