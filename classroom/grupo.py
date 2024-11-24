@@ -5,7 +5,7 @@ class Grupo:
 
     def __init__(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=[]): #estudinate se crean como lista y asignatura se deja en None
         self._grupo = grupo
-        if asignaturas == None: #Se hace esto porque Pyhton solo crea una lista por función
+        if asignaturas is None: #Se hace esto porque Pyhton solo crea una lista por función
             asignaturas = []
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes #Se declara el atributo como público (simbólicamente) ya que se accede desde el main 
@@ -15,7 +15,7 @@ class Grupo:
             self._asignaturas.append(Asignatura(x))
 
     def agregarAlumno(self, alumno, lista=None):#Es necesario poner el None, para que se trabaje con diferentes listas según el grupo
-        if lista == None:
+        if lista is None:
             lista = []
         lista.append(alumno)
         self.listadoAlumnos = self.listadoAlumnos + lista
